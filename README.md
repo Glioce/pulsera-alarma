@@ -20,3 +20,6 @@ A1 P2, A2 P4, A3 P3, A0 P5
 Cómo instalar  
 https://digistump.com/wiki/digispark/tutorials/connecting  
 Instalación de drivers puede fallar, copiar ruta de archivo y ejecutar como administrador.  
+
+Charlieplexing  
+https://en.wikipedia.org/wiki/Charlieplexing
