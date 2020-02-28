@@ -12,8 +12,8 @@ https://digistump.com/wiki/digispark/tutorials/modelbi2c
 
 Limitaciones  
 https://digistump.com/wiki/digispark/tutorials/basics  
-Pin 3 tiene una resistencia pull-up de 1.5k  
-Pin 5 no solo puede proporcionar 3V  
+Pin 3 tiene una resistencia pull-up de 1.5k para USB  
+Pin 5 solo puede proporcionar 3V  
 Esta es la correspondencia de entradas analógicas con número de pines:  
 A1 P2, A2 P4, A3 P3, A0 P5  
 
