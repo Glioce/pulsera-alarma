@@ -1,13 +1,26 @@
 // pines conectados a los LEDs
-byte pinLED[] = {0, 1, 2, 3};
+byte pinLED[] = {0, 1, 2, 4};
 //               0  1  2  3
 uint16_t salida = 07770;
 
 void setup() {
+  pinMode(0, OUTPUT);
+  pinMode(1, OUTPUT);
+  pinMode(2, OUTPUT);
+  //pinMode(3, INPUT);
+  pinMode(4, OUTPUT);
+  //pinMode(5, INPUT);
+  
+  digitalWrite(0, 1);
+  digitalWrite(1, 0);
+  digitalWrite(2, 1);
+  //digitalWrite(3, HIGH);
+  digitalWrite(4, 1);
+  //digitalWrite(5, HIGH);
 }
 
 void loop() {
-  barrido(salida);
+  //barrido(salida);
 }
 
 void barrido(uint16_t a) {
@@ -23,14 +36,14 @@ void barrido(uint16_t a) {
     for (byte j = 0; j <= 3; j ++) {
       if (i == j) continue; //no puede ser el mismo pin
 
-      if (a & 1) {
+      if ((a & 1) == 1) {
         pinMode(pinLED[j], OUTPUT);
         digitalWrite(pinLED[j], 1); //encendido
       }
       else pinMode(pinLED[j], INPUT); //apagado
 
       a = a >> 1; //recorrer 1 bit
-      delay(1);
+      delay(2);
     }
   }
 }
