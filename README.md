@@ -19,7 +19,27 @@ A1 P2, A2 P4, A3 P3, A0 P5
 
 Cómo instalar  
 https://digistump.com/wiki/digispark/tutorials/connecting  
+https://www.luisllamas.es/programar-digispark-con-el-ide-de-arduino/  
 Instalación de drivers puede fallar, copiar ruta de archivo y ejecutar como administrador.  
+
+Deshabilitar reset  
+http://ihackedathing.blogspot.com/2016/11/digispark-reset-disable.html  
+http://thetoivonen.blogspot.com/2015/12/fixing-pin-p5-or-6-on-digispark-clones.html  
+Usar avrdude (línea de comandos) o una GUI  
+https://blog.zakkemble.net/avrdudess-a-gui-for-avrdude/  
+https://github.com/zkemble/AVRDUDESS  
 
 Charlieplexing  
 https://en.wikipedia.org/wiki/Charlieplexing
+
+Features and Electrical Characteristics
+CPU	8 bit
+Number of Programmable I/O pins	6
+Operating Voltage	+1.8 V to +5.5V (ATTINY85V) +2.7 V to +5.5V (ATTINY85)(+6.0V being absolute maximum supply voltage)
+Maximum DC Current per I/O Pin	40 mA
+Maximum DC Current through VCC and GND Pins	200 mA
+
+## Conexiones
+LEDs multiplexados en pines 0, 1, 2, 4. No se usa el pin 3 porque tiene resistencia pull-up.  
+Buzzer en pin 3. Suena con volumen más alto en pin 3, comparado con pin 5.  
+Botón en pin 5. Falta probar
