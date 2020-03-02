@@ -43,3 +43,16 @@ Maximum DC Current through VCC and GND Pins	200 mA
 LEDs multiplexados en pines 0, 1, 2, 4. No se usa el pin 3 porque tiene resistencia pull-up.  
 Buzzer en pin 3. Suena con volumen más alto en pin 3, comparado con pin 5.  
 Botón en pin 5. Falta probar
+
+## Mejoras opcionales
+Poner interruptor deslizable para apagar fácilmente sin retirar la batería  
+
+Planear el cableado de la cara trasera para que no queden líneas encimadas  
+
+Soldar digispark a la placa grande para resultado más compacto  
+
+Imprimir tapita para cubrir parte trasera y tener espacio para correas  
+
+Buscar buzzer con volumen alto  
+
+Cotizar diseño de la siguiente placa  
