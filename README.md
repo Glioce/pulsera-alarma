@@ -56,3 +56,8 @@ Imprimir tapita para cubrir parte trasera y tener espacio para correas
 Buscar buzzer con volumen alto  
 
 Cotizar diseño de la siguiente placa  
+
+Programar sleep mode  
+https://wiki.liutyi.info/display/ARDUINO/Low+power+projects+digispark+ATtiny85+modification  
+https://forum.arduino.cc/index.php?topic=557534.0  
+https://digistump.com/board/index.php?topic=2953.0  
