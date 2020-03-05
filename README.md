@@ -1,4 +1,4 @@
-# pulsera-alarma
+# W-ALERT (pulsera-alarma)
 Pulsera con LEDs y un pequeño buzzer
 
 El diseño de referencia es un reloj  
