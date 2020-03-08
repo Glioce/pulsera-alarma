@@ -1,18 +1,16 @@
-/**********************************************
+/****************************************************************
   W-ALERT
 
   Es un dispositivo que se usa como pulsera.
-  Presiona el botón para activar o descarivar
-  la alarma.
-  Cuando la alarma está activada, se encienden
-  luces y un buzzer.
-***********************************************/
+  Presiona el botón para activar o descarivar la alarma.
+  Cuando la alarma está activada, se encienden luces y un buzzer.
+*****************************************************************/
 
 // Definición de pines
 #define pinBoton 5 //botón para activar alarma
 #define pinBuzzer 3 //zumbador
 byte pinLED[] = {0, 1, 2, 4}; //pines conectados a los LEDs
-//               0  1  2  3
+//pos. en array: 0  1  2  3
 
 // Variables globales
 uint16_t salida = 05252; //patrón que se muestra en los LEDs
@@ -23,13 +21,12 @@ byte buzzer = 1; //estado del buzzer
 unsigned long t = 0; //tiempo actual
 unsigned long tBoton = 0; //momento de leer el estado del botón
 unsigned long tAnim = 0; //momento de cambiar el patron de animación
-unsigned long tBuzzer = 0; //momento de cambiar el buzzer
+unsigned long tBuzzer = 0; //momento de cambiar el estado del buzzer
 int contAnim = 0; //contador para la animación
-
 
 void setup() {
   // Botón pulsador
-  // Cuando no está pulsado, en la entrada se lee el valor 1.
+  // Cuando no está pulsado, se lee el valor 1.
   // Cuando se presiona, cambia a 0 (nivel bajo).
   pinMode(pinBoton, INPUT_PULLUP);
 
@@ -40,7 +37,7 @@ void setup() {
   // Cuando la salida es 0, el buzzer está encendido
   pinMode(pinBuzzer, OUTPUT);
   digitalWrite(pinBuzzer, 1); //apagado
-}
+} 
 
 void loop() {
   t = millis(); //leer tiempo actual
@@ -76,7 +73,7 @@ void loop() {
     barrido(salida); //mostrar patrón
     digitalWrite(pinBuzzer, 0); //encender buzzer
   }
-  else { // si la alarma no está activada
+  else { // si la alarma está apagada
     barrido(0); //apagar LEDs
     digitalWrite(pinBuzzer, 1); //apagar buzzer
   }
