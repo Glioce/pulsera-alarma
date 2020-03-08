@@ -49,7 +49,7 @@ void loop() {
     boton = digitalRead(pinBoton); //leer estado del botón
     if (boton == 0 and botonPrev == 1) {//si se acaba de presionar
       alarma ^= 1; //activar o desactivar la alarma
-      
+
       if (alarma) {//si se acaba de activar la alarma
         contAnim = 0; //reiniciar contador
         tAnim = t; //actualizar tiempo
@@ -72,13 +72,9 @@ void loop() {
       //incrementar contador, si es mayor a 3, regresa a 0
       contAnim = ++contAnim % 4;
     }
-    barrido(salida); //mostrar patrón
 
-    if (t >= tBuzzer) {
-      buzzer ^= 1; //cambiar estado del buzzer
-      digitalWrite(pinBuzzer, buzzer);
-      tBuzzer += 500; //esperar antes de volver a cambiar el estado
-    }
+    barrido(salida); //mostrar patrón
+    digitalWrite(pinBuzzer, 0); //encender buzzer
   }
   else { // si la alarma no está activada
     barrido(0); //apagar LEDs

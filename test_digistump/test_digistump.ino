@@ -4,11 +4,17 @@
 
 void setup() {
   pinMode(LED_PIN, OUTPUT);
+  pinMode(3, OUTPUT);
+  pinMode(5, OUTPUT);
 }
 
 void loop() {
   digitalWrite(LED_PIN, HIGH);
-  delay(400);
+  digitalWrite(3, HIGH);
+  digitalWrite(5, HIGH);
+  delay(1000);
   digitalWrite(LED_PIN, LOW);
-  delay(50);
+  digitalWrite(3, LOW);
+  digitalWrite(5, LOW);
+  delay(1000);
 }
